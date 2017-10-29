@@ -1,8 +1,18 @@
 <html>
-<head>
-<!-- <link rel="stylesheet" href='/static/style.css' /> -->
-</head>
-<body>
-<h1>Door is open!</h1>
-</body>
+
+<h1 id="demo"></h1>
+        
+<script>
+    var response;
+    if( {{value}} < 70) {
+        response = "The door is open!"
+        document.body.style.background = "green";
+    }
+    else {
+        response = "The door is closed!";
+        document.body.style.background = "red";
+    }
+    document.getElementById("demo").innerHTML = response;
+</script>  
+
 </html>
