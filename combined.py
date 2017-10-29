@@ -46,11 +46,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     dist = distance()
-    if dist < 70:
-        return render_template('open.html', value = dist)
-    else:
-        return render_template('closed.html')
- 
+    return render_template('open.html', value = dist) 
  
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
